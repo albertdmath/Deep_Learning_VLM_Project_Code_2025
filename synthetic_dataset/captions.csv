@@ -1,11 +1,11 @@
-filename,caption
-scene_00.png,"yellow square above green circle, with red circle and blue triangle and yellow triangle as distractor(s)"
-scene_01.png,"red circle left of blue triangle, with purple triangle and red triangle and yellow triangle as distractor(s)"
-scene_02.png,"purple square below green triangle, with green square and red circle and purple circle as distractor(s)"
-scene_03.png,"yellow triangle above green triangle, with blue triangle as distractor(s)"
-scene_04.png,"purple triangle left of purple circle, with red circle and red square as distractor(s)"
-scene_05.png,"purple triangle left of green circle, with blue triangle as distractor(s)"
-scene_06.png,"green triangle left of blue circle, with red square and red square and yellow circle as distractor(s)"
-scene_07.png,"red triangle left of red square, with blue square and yellow square as distractor(s)"
-scene_08.png,"blue square above red square, with purple triangle as distractor(s)"
-scene_09.png,"red triangle left of purple square, with blue circle and yellow square as distractor(s)"
+filename,caption,shapes
+scene_00.png,"yellow square below yellow circle, with green triangle as distractor(s)",square|yellow|205|177|185|157|225|197;circle|yellow|122|94|102|74|142|114;triangle|green|55|118|35|98|75|138
+scene_01.png,"purple circle below green square, with blue square and blue circle and yellow circle as distractor(s)",square|blue|43|201|23|181|63|221;circle|blue|76|98|56|78|96|118;circle|yellow|172|150|152|130|192|170;square|green|107|43|87|23|127|63;circle|purple|91|162|71|142|111|182
+scene_02.png,"red triangle left of blue triangle, with green circle as distractor(s)",triangle|red|126|180|106|160|146|200;circle|green|155|52|135|32|175|72;triangle|blue|206|142|186|122|226|162
+scene_03.png,"purple circle right of purple triangle, with blue triangle and blue circle and red square as distractor(s)",triangle|blue|192|204|172|184|212|224;circle|blue|61|213|41|193|81|233;triangle|purple|93|108|73|88|113|128;circle|purple|169|132|149|112|189|152;square|red|183|45|163|25|203|65
+scene_04.png,"purple circle below green circle, with yellow circle and blue triangle and red square as distractor(s)",circle|yellow|130|203|110|183|150|223;circle|purple|85|147|65|127|105|167;circle|green|150|55|130|35|170|75;triangle|blue|197|160|177|140|217|180;square|red|62|85|42|65|82|105
+scene_05.png,"purple square left of yellow triangle, with purple circle and yellow circle as distractor(s)",circle|purple|179|188|159|168|199|208;circle|yellow|116|174|96|154|136|194;square|purple|52|126|32|106|72|146;triangle|yellow|161|73|141|53|181|93
+scene_06.png,"green circle below yellow triangle, with red triangle and green square and red circle as distractor(s)",triangle|red|194|106|174|86|214|126;triangle|yellow|144|68|124|48|164|88;circle|green|123|147|103|127|143|167;square|green|67|195|47|175|87|215;circle|red|73|42|53|22|93|62
+scene_07.png,"purple circle above yellow circle, with green triangle and purple triangle as distractor(s)",circle|yellow|104|214|84|194|124|234;circle|purple|100|83|80|63|120|103;triangle|green|196|98|176|78|216|118;triangle|purple|174|214|154|194|194|234
+scene_08.png,"red square left of purple square, with purple circle and red triangle as distractor(s)",circle|purple|111|167|91|147|131|187;triangle|red|44|155|24|135|64|175;square|red|87|105|67|85|107|125;square|purple|166|61|146|41|186|81
+scene_09.png,"green square left of yellow circle, with yellow triangle and purple circle as distractor(s)",circle|yellow|172|72|152|52|192|92;square|green|75|80|55|60|95|100;triangle|yellow|142|183|122|163|162|203;circle|purple|87|148|67|128|107|168
