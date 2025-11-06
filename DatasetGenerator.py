@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw
 
 # === Configuration ===
 OUTPUT_DIR = "synthetic_dataset"
-NUM_IMAGES = 10
+NUM_IMAGES = 100
 IMG_SIZE = 256
 SHAPES = ["circle", "square", "triangle"]
 COLORS = {
