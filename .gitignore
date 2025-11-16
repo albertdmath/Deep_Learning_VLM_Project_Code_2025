@@ -1,0 +1,47 @@
+# ---------------------------
+# Python build / cache files
+# ---------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# ---------------------------
+# Virtual environments
+# ---------------------------
+venv/
+.env/
+.venv/
+
+# ---------------------------
+# Jupyter Notebook artifacts
+# ---------------------------
+.ipynb_checkpoints/
+.jupyter/
+*.nbconvert/
+
+# ---------------------------
+# Local data / results
+# ---------------------------
+*.csv
+*.tsv
+*.parquet
+*.h5
+*.hdf5
+*.db
+
+# ---------------------------
+# Temporary files
+# ---------------------------
+*.tmp
+*.temp
+*.swp
+
+# ---------------------------
+# OS / Editor junk
+# ---------------------------
+.DS_Store
+Thumbs.db
+.vscode/

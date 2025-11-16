@@ -1,0 +1,300 @@
+Image: scene_0000.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the triangle as blue and the square as red.
+------------------------------------------------------------
+Image: scene_0001.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the triangle as purple, which is not the correct color for a triangle. The correct color for a triangle is red.
+------------------------------------------------------------
+Image: scene_0002.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the red circle is below the blue circle, but the image shows a yellow square.
+------------------------------------------------------------
+Image: scene_0003.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the yellow square is to the left of the purple circle, but the image shows a purple circle.
+------------------------------------------------------------
+Image: scene_0004.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the purple triangle is blue, which is not accurate. The correct caption should describe the shape of the object in the image, which is a purple circle.
+------------------------------------------------------------
+Image: scene_0005.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the triangle is blue, but the image shows a green square.
+------------------------------------------------------------
+Image: scene_0006.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shapes as a green square, a red circle, and a red triangle. The correct shapes are a green square, a red circle, and a red triangle.
+------------------------------------------------------------
+Image: scene_0007.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the image shows a yellow circle, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0008.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the triangle is yellow, but the triangle is actually a yellow triangle.
+------------------------------------------------------------
+Image: scene_0009.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there are two blue squares below the red circle, but the image shows only one blue square.
+------------------------------------------------------------
+Image: scene_0010.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shapes as a red square, a purple circle, a green circle, a purple circle, a green triangle, and a yellow circle.
+------------------------------------------------------------
+Image: scene_0011.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the red circle is above the purple square, but the image shows a green square instead.
+------------------------------------------------------------
+Image: scene_0012.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as a red square, a blue circle, a green triangle, a yellow circle, and a yellow circle. The correct caption should include the correct object names to accurately describe the image.
+------------------------------------------------------------
+Image: scene_0013.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the image shows a yellow square, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0014.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as "blue circle" and "green circle," which are not present in the image. The correct caption should include the correct object names to accurately describe the image.
+------------------------------------------------------------
+Image: scene_0015.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the purple circle is below the green triangle, which is not the case. The correct caption should read "purple circle below green triangle."
+------------------------------------------------------------
+Image: scene_0016.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the yellow square is yellow, which is not accurate. The correct caption should describe the color of the square, which is yellow.
+------------------------------------------------------------
+Image: scene_0017.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there are two green circles, but there is only one green circle in the image.
+------------------------------------------------------------
+Image: scene_0018.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the colors as yellow, green, and red, which are not present in the image.
+------------------------------------------------------------
+Image: scene_0019.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shapes as a red circle, a green square, a blue triangle, and a blue triangle.
+------------------------------------------------------------
+Image: scene_0020.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the purple square is above the green triangle, but the image shows a purple square above a green triangle.
+------------------------------------------------------------
+Image: scene_0021.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shapes as a green circle, a green square, a purple circle, and a yellow triangle. The correct shapes are a green circle, a green square, and a green square.
+------------------------------------------------------------
+Image: scene_0022.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the blue circle is a square, but the image shows a green square.
+------------------------------------------------------------
+Image: scene_0023.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the triangle as a yellow triangle, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0024.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the green circle is above the blue square, but the image shows a green circle above a yellow square.
+------------------------------------------------------------
+Image: scene_0025.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as a blue square, a purple circle, a red triangle, and a red triangle. The correct caption should include the correct object names.
+------------------------------------------------------------
+Image: scene_0026.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as a purple circle and a yellow square, which are not present in the image.
+------------------------------------------------------------
+Image: scene_0027.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the triangle below the purple triangle is a red triangle, which is not the case. The correct caption should read "blue triangle below purple triangle."
+------------------------------------------------------------
+Image: scene_0028.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the triangle as a green triangle, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0029.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there are three green circles, but there are actually two green circles in the image.
+------------------------------------------------------------
+Image: scene_0030.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as a yellow square, a green square, and a blue triangle, which are not present in the image.
+------------------------------------------------------------
+Image: scene_0031.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the colors of the triangles as purple, blue, and green, which are not present in the image.
+------------------------------------------------------------
+Image: scene_0032.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there is a purple square in the bottom left corner of the image, which is not present in the picture.
+------------------------------------------------------------
+Image: scene_0033.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as a blue circle and a yellow triangle, which are not present in the image.
+------------------------------------------------------------
+Image: scene_0034.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there are three purple triangles, but the image shows three blue triangles.
+------------------------------------------------------------
+Image: scene_0035.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shapes as a triangle, a square, a circle, and a square, which are not present in the image.
+------------------------------------------------------------
+Image: scene_0036.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the triangle as a yellow triangle, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0037.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there is a yellow circle to the left of a yellow triangle, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0038.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the triangle is purple, but the image shows a purple square.
+------------------------------------------------------------
+Image: scene_0039.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the image shows a "green green circle," which is not present in the image.
+------------------------------------------------------------
+Image: scene_0040.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the triangle as a blue triangle and the square as a red square.
+------------------------------------------------------------
+Image: scene_0041.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the triangle as blue, the green circle as a green circle, and the yellow circle as a yellow circle.
+------------------------------------------------------------
+Image: scene_0042.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there is a blue triangle below the yellow circle, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0043.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shape of the object as a red triangle, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0044.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the green circle is to the left of the purple circle, which is not the case. The correct caption should read "green circle to the left of purple circle."
+------------------------------------------------------------
+Image: scene_0045.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the yellow circle is above the blue square, but the image shows a yellow circle above a blue square.
+------------------------------------------------------------
+Image: scene_0046.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the triangle as purple, which is not the correct color for a triangle. The triangle should be purple, not yellow.
+------------------------------------------------------------
+Image: scene_0047.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as a purple triangle, a purple hexagon, a red square, a green square, and a blue square. The correct caption should include the correct object names to accurately describe the image.
+------------------------------------------------------------
+Image: scene_0048.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the yellow square is below the green square, but the image shows a green square above the yellow square.
+------------------------------------------------------------
+Image: scene_0049.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shape of the object as a triangle, which is not the case. The correct shape is a circle.
+------------------------------------------------------------
+Image: scene_0050.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the image shows a square with a red circle and a yellow square, but the image actually shows a square with a red circle and a yellow square.
+------------------------------------------------------------
+Image: scene_0051.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shapes as a red circle, a green square, a blue triangle, and a blue circle. The correct shapes are a red circle, a green square, and a blue triangle.
+------------------------------------------------------------
+Image: scene_0052.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there is a blue square in the center of the image, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0053.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shapes as a triangle and a square, which are not present in the image.
+------------------------------------------------------------
+Image: scene_0054.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the triangle as a green triangle, which is not a valid shape.
+------------------------------------------------------------
+Image: scene_0055.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the triangle is blue, but the triangle is actually blue.
+------------------------------------------------------------
+Image: scene_0056.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the image shows a "blue square left of yellow square," which is not present in the image.
+------------------------------------------------------------
+Image: scene_0057.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the yellow square is below the blue triangle, but the image shows a blue triangle above the yellow square.
+------------------------------------------------------------
+Image: scene_0058.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shapes as a red triangle, a green square, a green circle, and a red circle.
+------------------------------------------------------------
+Image: scene_0059.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shapes as a green circle, a green square, a yellow square, a red triangle, and a blue triangle.
+------------------------------------------------------------
+Image: scene_0060.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there are two yellow triangles, but there is only one yellow circle in the image.
+------------------------------------------------------------
+Image: scene_0061.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the triangle as a red triangle and the square as a green square.
+------------------------------------------------------------
+Image: scene_0062.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the triangle is purple, but the triangle is actually purple.
+------------------------------------------------------------
+Image: scene_0063.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the triangle is blue, but the image shows a blue square.
+------------------------------------------------------------
+Image: scene_0064.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the purple circle is below the blue square, but the image shows a red square and a blue square.
+------------------------------------------------------------
+Image: scene_0065.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as a yellow circle, a purple triangle, a blue triangle, a blue square, a red square, and a red rectangle.
+------------------------------------------------------------
+Image: scene_0066.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there is a red circle in the center of the image, which is not present in the picture.
+------------------------------------------------------------
+Image: scene_0067.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the image as a "wonderful" one, which is not a description of the image itself.
+------------------------------------------------------------
+Image: scene_0068.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there are three triangles in the image, but the image shows only two triangles.
+------------------------------------------------------------
+Image: scene_0069.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the green circle is a square, which is not the case. The correct caption should describe the shape of the object in the image, which is a green circle.
+------------------------------------------------------------
+Image: scene_0070.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the green circle is in front of the purple square, but the image shows a green circle in front of a purple square.
+------------------------------------------------------------
+Image: scene_0071.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the green circle is in front of the blue square, but the image shows a green circle in the center of the image, not in front of the blue square.
+------------------------------------------------------------
+Image: scene_0072.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shape of the object as a yellow circle, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0073.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as a green square, a blue circle, and a purple triangle, which are not present in the image.
+------------------------------------------------------------
+Image: scene_0074.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as a purple triangle, a purple triangle, a purple hexagon, a green circle, a yellow circle, a blue square, and a yellow square.
+------------------------------------------------------------
+Image: scene_0075.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the triangle as a yellow triangle, which is not the case. The correct identification of the triangle is blue.
+------------------------------------------------------------
+Image: scene_0076.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the red circle is above the yellow square, but the image shows a yellow square and a blue triangle.
+------------------------------------------------------------
+Image: scene_0077.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as a green circle, a yellow triangle, and a blue square. The correct caption should include the correct object names to accurately describe the image.
+------------------------------------------------------------
+Image: scene_0078.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the shapes as a yellow square, a yellow circle, a yellow triangle, a purple circle, a purple circle, and a green triangle.
+------------------------------------------------------------
+Image: scene_0079.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the colors as yellow, green, purple, red, and red.
+------------------------------------------------------------
+Image: scene_0080.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the triangle is red, but the image shows a yellow circle.
+------------------------------------------------------------
+Image: scene_0081.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there is a yellow triangle below the red square, but the image shows a yellow triangle below a red square.
+------------------------------------------------------------
+Image: scene_0082.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there are three red triangles and two blue triangles, which is not accurate. The correct caption should include the correct number of triangles, which is three.
+------------------------------------------------------------
+Image: scene_0083.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the red square is above the green square, but the image shows a red circle above the green square.
+------------------------------------------------------------
+Image: scene_0084.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the triangle is blue, but the triangle is actually green.
+------------------------------------------------------------
+Image: scene_0085.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the image shows a "green square" and "purple square," which are not present in the image. The caption incorrectly identifies the image as a "square" and "square," which are not the actual objects in the image.
+------------------------------------------------------------
+Image: scene_0086.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the red circle is below the yellow square, but the image shows a yellow square and a red circle.
+------------------------------------------------------------
+Image: scene_0087.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the image shows a "red circle left of purple square," which is not present in the image. The correct caption should describe the image as "A pixelated image of a purple square with four colored circles around it."
+------------------------------------------------------------
+Image: scene_0088.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there is a purple circle below the purple triangle, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0089.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as "purple circle" and "blue circle," which are not present in the image. The correct caption should include the correct objects present in the image.
+------------------------------------------------------------
+Image: scene_0090.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the blue circle is in the right of the green square, but the image shows a purple square and a green square.
+------------------------------------------------------------
+Image: scene_0091.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the objects as a red circle, a blue triangle, and a green square, which are not present in the image.
+------------------------------------------------------------
+Image: scene_0092.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the blue sphere is below the purple triangle, but the image shows a red sphere below the purple triangle.
+------------------------------------------------------------
+Image: scene_0093.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there is a yellow circle and a purple triangle, which are not present in the image.
+------------------------------------------------------------
+Image: scene_0094.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the blue square is below the yellow square, but the image shows a blue square above the yellow square.
+------------------------------------------------------------
+Image: scene_0095.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the yellow square is above the blue square, but the image shows a yellow circle above a blue square.
+------------------------------------------------------------
+Image: scene_0096.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the image shows a square with a yellow circle and a blue triangle, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0097.png
+Output: No, the caption does not match the picture. The caption incorrectly identifies the object as a green circle, which is not present in the image.
+------------------------------------------------------------
+Image: scene_0098.png
+Output: No, the caption does not match the picture. The caption incorrectly states that the red circle is below the blue square, but the image shows a red circle above the blue square.
+------------------------------------------------------------
+Image: scene_0099.png
+Output: No, the caption does not match the picture. The caption incorrectly states that there are two red triangles below the red square, but there are actually only two blue triangles below the red square.
+------------------------------------------------------------
