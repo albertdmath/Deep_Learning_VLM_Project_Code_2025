@@ -2,7 +2,8 @@ from pathlib import Path
 from PIL import Image
 import torch
 from transformers import AutoProcessor, AutoModelForVision2Seq
-import pandas as pd
+import json
+import jsonlines   # pip install jsonlines
 
 # ------------------------
 # SETUP
@@ -10,7 +11,7 @@ import pandas as pd
 model_id = "Qwen/Qwen2-VL-2B-Instruct"
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-dtype = torch.float16 if device == "cuda" else torch.float32
+dtype = torch.bfloat16 if device == "cuda" else torch.float32
 
 print("Loading model...")
 model = AutoModelForVision2Seq.from_pretrained(
@@ -22,36 +23,48 @@ model = AutoModelForVision2Seq.from_pretrained(
 print("Loading processor...")
 processor = AutoProcessor.from_pretrained(model_id)
 
-# Folder with images
 folder = Path("./synthetic_dataset")
+annotations_path = folder / "annotations.jsonl"
 output_file = Path("inference_results.txt")
 
-# Store the captions for the text prompts
-path = Path("./synthetic_dataset/image_captions_ground_truth.csv")
-captions = pd.read_csv(path, usecols=["caption"])["caption"]
-
-# Remove the part about distractors
-simple_captions = captions.str.split(",", n=1).str[0]
-simple_captions = simple_captions + " - does this caption match the picture? Yes/No"
-
-# Clean/create output file
+# Clean output file
 output_file.write_text("")   # empty the file at the start
+
+# ------------------------
+# LOAD ALL JSON ANNOTATIONS
+# ------------------------
+print("Reading JSON annotations...")
+
+annotations = {}  # map: scene_id -> record
+
+with jsonlines.open(annotations_path) as reader:
+    for record in reader:
+        scene_id = record["scene_id"]    # e.g. "scene_0001"
+        annotations[scene_id] = record
+
+print(f"Loaded {len(annotations)} annotation entries.")
 
 # ------------------------
 # PROCESS IMAGES
 # ------------------------
-
 files = sorted(folder.glob("*.png"))
-
 print(f"Found {len(files)} images.")
 
-for prompt_text, img_path in zip(simple_captions, files):
+for img_path in files:
+    scene_id = img_path.stem            # "scene_0001"
+    if scene_id not in annotations:
+        print(f"Warning: No annotation found for {img_path.name}")
+        continue
+
+    record = annotations[scene_id]
+    prompt_text = record["caption_prompt"]
+
     print(f"Processing {img_path.name}...")
 
     # Load image
     raw_image = Image.open(img_path).convert("RGB")
 
-    # Build conversation prompt (Qwen2-VL format)
+    # Build Qwen2-VL chat prompt
     conversation = [
         {
             "role": "user",
@@ -83,17 +96,17 @@ for prompt_text, img_path in zip(simple_captions, files):
             do_sample=False
         )
 
+    # Only decode the generated text
     prompt_len = inputs["input_ids"].shape[1]
-
-    # Decode only the generated answer (without the prompt tokens)
     text = processor.batch_decode(
         output_ids[:, prompt_len:],
         skip_special_tokens=True
     )[0]
 
-    # Save to file
+    # Save results
     with output_file.open("a") as f:
         f.write(f"Image: {img_path.name}\n")
+        f.write(f"Prompt: {prompt_text}\n")
         f.write(f"Output: {text}\n")
         f.write("-" * 60 + "\n")
 
