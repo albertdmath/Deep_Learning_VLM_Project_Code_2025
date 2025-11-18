@@ -1,101 +1,101 @@
 filename,caption,shapes
-scene_0000.png,"blue triangle left of red square, with yellow square and red triangle as distractor(s)",square|yellow|131|89|111|69|151|109;square|red|162|146|142|126|182|166;triangle|blue|111|181|91|161|131|201;triangle|red|70|55|50|35|90|75
-scene_0001.png,"purple triangle left of red triangle, with blue circle and green circle as distractor(s)",triangle|red|158|126|138|106|178|146;triangle|purple|67|94|47|74|87|114;circle|blue|160|211|140|191|180|231;circle|green|96|189|76|169|116|209
-scene_0002.png,"red circle below blue circle, with yellow square and purple circle as distractor(s)",circle|red|102|161|82|141|122|181;square|yellow|129|92|109|72|149|112;circle|blue|59|111|39|91|79|131;circle|purple|215|78|195|58|235|98
-scene_0003.png,"yellow square left of purple circle, with purple square as distractor(s)",square|yellow|94|157|74|137|114|177;square|purple|61|68|41|48|81|88;circle|purple|185|94|165|74|205|114
-scene_0004.png,"purple square above purple circle, with blue triangle as distractor(s)",triangle|blue|46|173|26|153|66|193;square|purple|115|46|95|26|135|66;circle|purple|128|204|108|184|148|224
-scene_0005.png,"blue triangle right of blue square, with green square and green circle and yellow triangle as distractor(s)",square|blue|66|97|46|77|86|117;square|green|76|171|56|151|96|191;circle|green|167|139|147|119|187|159;triangle|blue|213|192|193|172|233|212;triangle|yellow|131|90|111|70|151|110
-scene_0006.png,"red circle above red triangle, with green square as distractor(s)",square|green|121|70|101|50|141|90;circle|red|203|109|183|89|223|129;triangle|red|209|177|189|157|229|197
-scene_0007.png,"green square left of green triangle, with red square and red circle and yellow circle as distractor(s)",square|green|89|107|69|87|109|127;square|red|177|99|157|79|197|119;circle|red|141|197|121|177|161|217;circle|yellow|125|48|105|28|145|68;triangle|green|203|172|183|152|223|192
-scene_0008.png,"red circle above purple circle, with yellow triangle as distractor(s)",circle|red|211|72|191|52|231|92;triangle|yellow|61|201|41|181|81|221;circle|purple|200|146|180|126|220|166
-scene_0009.png,"blue square below red circle, with purple square and purple circle as distractor(s)",square|purple|183|181|163|161|203|201;circle|purple|201|60|181|40|221|80;circle|red|113|101|93|81|133|121;square|blue|85|196|65|176|105|216
-scene_0010.png,"green circle above green triangle, with purple circle and yellow circle and red square as distractor(s)",circle|purple|58|154|38|134|78|174;triangle|green|136|186|116|166|156|206;circle|green|158|90|138|70|178|110;circle|yellow|214|184|194|164|234|204;square|red|67|94|47|74|87|114
-scene_0011.png,"red circle above purple square, with purple circle and green square and blue circle as distractor(s)",square|purple|85|110|65|90|105|130;circle|purple|161|48|141|28|181|68;square|green|161|165|141|145|181|185;circle|red|79|42|59|22|99|62;circle|blue|47|211|27|191|67|231
-scene_0012.png,"red square below blue circle, with green triangle and yellow circle as distractor(s)",triangle|green|97|97|77|77|117|117;circle|yellow|147|146|127|126|167|166;circle|blue|214|57|194|37|234|77;square|red|97|214|77|194|117|234
-scene_0013.png,"green square below purple square, with purple triangle and yellow square as distractor(s)",triangle|purple|149|73|129|53|169|93;square|yellow|40|48|20|28|60|68;square|green|75|166|55|146|95|186;square|purple|98|106|78|86|118|126
-scene_0014.png,"green circle right of yellow triangle, with blue circle and red triangle and purple circle as distractor(s)",circle|blue|123|108|103|88|143|128;circle|green|127|176|107|156|147|196;triangle|red|200|84|180|64|220|104;triangle|yellow|61|118|41|98|81|138;circle|purple|211|160|191|140|231|180
-scene_0015.png,"purple circle below red square, with green triangle as distractor(s)",circle|purple|183|177|163|157|203|197;square|red|64|42|44|22|84|62;triangle|green|56|120|36|100|76|140
-scene_0016.png,"red square right of blue circle, with yellow square and purple square and blue square as distractor(s)",circle|blue|99|81|79|61|119|101;square|yellow|50|190|30|170|70|210;square|red|179|123|159|103|199|143;square|purple|204|64|184|44|224|84;square|blue|212|210|192|190|232|230
-scene_0017.png,"green circle above red circle, with yellow square as distractor(s)",circle|green|143|160|123|140|163|180;square|yellow|103|73|83|53|123|93;circle|red|175|212|155|192|195|232
-scene_0018.png,"red square right of green square, with yellow square and green triangle as distractor(s)",square|red|182|182|162|162|202|202;square|yellow|79|131|59|111|99|151;triangle|green|165|40|145|20|185|60;square|green|97|213|77|193|117|233
-scene_0019.png,"green square above blue triangle, with red circle as distractor(s)",square|green|103|125|83|105|123|145;triangle|blue|119|189|99|169|139|209;circle|red|66|44|46|24|86|64
-scene_0020.png,"purple square above green triangle, with green square as distractor(s)",triangle|green|92|209|72|189|112|229;square|purple|86|48|66|28|106|68;square|green|119|153|99|133|139|173
-scene_0021.png,"green square below purple circle, with yellow triangle and green circle as distractor(s)",circle|purple|207|92|187|72|227|112;triangle|yellow|88|159|68|139|108|179;square|green|156|181|136|161|176|201;circle|green|120|107|100|87|140|127
-scene_0022.png,"green square below yellow square, with blue circle as distractor(s)",square|yellow|148|58|128|38|168|78;circle|blue|63|73|43|53|83|93;square|green|163|193|143|173|183|213
-scene_0023.png,"yellow triangle below purple circle, with red circle as distractor(s)",triangle|yellow|106|186|86|166|126|206;circle|purple|160|95|140|75|180|115;circle|red|88|95|68|75|108|115
-scene_0024.png,"green circle above blue square, with yellow square as distractor(s)",square|yellow|134|201|114|181|154|221;circle|green|184|40|164|20|204|60;square|blue|158|110|138|90|178|130
-scene_0025.png,"blue square left of purple circle, with red triangle and blue circle as distractor(s)",triangle|red|172|216|152|196|192|236;square|blue|43|57|23|37|63|77;circle|purple|134|112|114|92|154|132;circle|blue|86|185|66|165|106|205
-scene_0026.png,"purple circle left of yellow square, with red triangle as distractor(s)",square|yellow|203|120|183|100|223|140;circle|purple|61|202|41|182|81|222;triangle|red|201|184|181|164|221|204
-scene_0027.png,"blue triangle below purple triangle, with red square and green square as distractor(s)",square|red|71|161|51|141|91|181;triangle|purple|78|82|58|62|98|102;triangle|blue|136|163|116|143|156|183;square|green|153|62|133|42|173|82
-scene_0028.png,"green triangle left of red square, with blue square as distractor(s)",square|red|195|164|175|144|215|184;triangle|green|130|164|110|144|150|184;square|blue|45|196|25|176|65|216
-scene_0029.png,"purple triangle left of green triangle, with purple circle and green circle as distractor(s)",circle|purple|178|99|158|79|198|119;circle|green|200|165|180|145|220|185;triangle|green|134|141|114|121|154|161;triangle|purple|78|106|58|86|98|126
-scene_0030.png,"green square left of blue triangle, with yellow square as distractor(s)",triangle|blue|211|144|191|124|231|164;square|yellow|88|112|68|92|108|132;square|green|68|184|48|164|88|204
-scene_0031.png,"green triangle right of yellow square, with purple triangle and red square and blue triangle as distractor(s)",square|yellow|62|191|42|171|82|211;triangle|green|204|194|184|174|224|214;triangle|purple|149|99|129|79|169|119;square|red|51|98|31|78|71|118;triangle|blue|204|129|184|109|224|149
-scene_0032.png,"blue triangle right of green triangle, with yellow triangle and purple square and purple triangle as distractor(s)",triangle|yellow|121|77|101|57|141|97;triangle|blue|172|177|152|157|192|197;square|purple|70|210|50|190|90|230;triangle|green|48|101|28|81|68|121;triangle|purple|114|161|94|141|134|181
-scene_0033.png,"blue circle left of green square, with purple square and yellow triangle as distractor(s)",circle|blue|49|137|29|117|69|157;square|purple|124|104|104|84|144|124;triangle|yellow|190|46|170|26|210|66;square|green|176|149|156|129|196|169
-scene_0034.png,"purple triangle below blue triangle, with yellow triangle as distractor(s)",triangle|purple|57|207|37|187|77|227;triangle|yellow|211|97|191|77|231|117;triangle|blue|85|141|65|121|105|161
-scene_0035.png,"green triangle left of yellow square, with red circle and blue triangle and green square as distractor(s)",circle|red|108|108|88|88|128|128;triangle|blue|67|180|47|160|87|200;square|yellow|209|61|189|41|229|81;square|green|145|183|125|163|165|203;triangle|green|51|63|31|43|71|83
-scene_0036.png,"yellow triangle right of red triangle, with red circle and blue triangle as distractor(s)",circle|red|49|192|29|172|69|212;triangle|blue|144|193|124|173|164|213;triangle|red|82|60|62|40|102|80;triangle|yellow|141|82|121|62|161|102
-scene_0037.png,"yellow circle left of yellow triangle, with red triangle as distractor(s)",circle|yellow|43|110|23|90|63|130;triangle|yellow|173|183|153|163|193|203;triangle|red|188|88|168|68|208|108
-scene_0038.png,"purple triangle left of red square, with blue circle and purple square and red circle as distractor(s)",circle|blue|79|73|59|53|99|93;square|purple|136|144|116|124|156|164;circle|red|184|83|164|63|204|103;triangle|purple|118|209|98|189|138|229;square|red|193|214|173|194|213|234
-scene_0039.png,"purple square below red square, with purple circle and green circle and yellow triangle as distractor(s)",circle|purple|149|94|129|74|169|114;circle|green|83|207|63|187|103|227;square|red|52|47|32|27|72|67;square|purple|92|123|72|103|112|143;triangle|yellow|209|153|189|133|229|173
-scene_0040.png,"red triangle left of red square, with blue triangle as distractor(s)",triangle|blue|197|118|177|98|217|138;triangle|red|112|135|92|115|132|155;square|red|214|195|194|175|234|215
-scene_0041.png,"yellow triangle below green circle, with yellow square and blue triangle and red triangle as distractor(s)",square|yellow|131|88|111|68|151|108;triangle|blue|76|190|56|170|96|210;triangle|red|206|186|186|166|226|206;circle|green|183|40|163|20|203|60;triangle|yellow|215|124|195|104|235|144
-scene_0042.png,"blue triangle below green circle, with yellow triangle and yellow circle as distractor(s)",triangle|yellow|97|104|77|84|117|124;circle|yellow|50|213|30|193|70|233;triangle|blue|210|205|190|185|230|225;circle|green|76|40|56|20|96|60
-scene_0043.png,"red square right of red triangle, with purple circle and yellow circle and blue square as distractor(s)",square|red|103|108|83|88|123|128;circle|purple|199|173|179|153|219|193;circle|yellow|190|52|170|32|210|72;square|blue|86|171|66|151|106|191;triangle|red|46|56|26|36|66|76
-scene_0044.png,"purple circle right of green circle, with red square and green triangle and purple square as distractor(s)",square|red|159|48|139|28|179|68;triangle|green|56|186|36|166|76|206;square|purple|205|143|185|123|225|163;circle|green|86|127|66|107|106|147;circle|purple|161|186|141|166|181|206
-scene_0045.png,"yellow circle above blue square, with blue circle and yellow triangle as distractor(s)",square|blue|155|164|135|144|175|184;circle|blue|66|159|46|139|86|179;circle|yellow|67|67|47|47|87|87;triangle|yellow|190|106|170|86|210|126
-scene_0046.png,"purple triangle left of green circle, with blue triangle and yellow circle and blue circle as distractor(s)",circle|green|170|52|150|32|190|72;triangle|blue|120|162|100|142|140|182;triangle|purple|58|142|38|122|78|162;circle|yellow|212|184|192|164|232|204;circle|blue|120|94|100|74|140|114
-scene_0047.png,"red square above purple triangle, with green square and blue square as distractor(s)",square|green|158|198|138|178|178|218;square|red|108|147|88|127|128|167;triangle|purple|60|211|40|191|80|231;square|blue|63|81|43|61|83|101
-scene_0048.png,"green square below green triangle, with yellow square as distractor(s)",square|green|72|139|52|119|92|159;square|yellow|147|174|127|154|167|194;triangle|green|78|77|58|57|98|97
-scene_0049.png,"red circle left of red triangle, with yellow square and yellow circle and purple square as distractor(s)",square|yellow|180|141|160|121|200|161;triangle|red|153|214|133|194|173|234;circle|yellow|143|45|123|25|163|65;circle|red|59|173|39|153|79|193;square|purple|205|64|185|44|225|84
-scene_0050.png,"purple square right of red circle, with yellow square and blue circle and blue square as distractor(s)",circle|red|86|110|66|90|106|130;square|yellow|100|191|80|171|120|211;circle|blue|184|165|164|145|204|185;square|purple|181|61|161|41|201|81;square|blue|216|112|196|92|236|132
-scene_0051.png,"green square right of red circle, with blue triangle and blue circle as distractor(s)",triangle|blue|73|159|53|139|93|179;circle|red|105|56|85|36|125|76;square|green|216|61|196|41|236|81;circle|blue|169|161|149|141|189|181
-scene_0052.png,"yellow triangle right of purple triangle, with blue square as distractor(s)",triangle|yellow|205|62|185|42|225|82;triangle|purple|84|87|64|67|104|107;square|blue|134|131|114|111|154|151
-scene_0053.png,"red triangle below yellow square, with red circle and yellow circle and green circle as distractor(s)",triangle|red|214|204|194|184|234|224;circle|red|76|169|56|149|96|189;square|yellow|156|123|136|103|176|143;circle|yellow|139|208|119|188|159|228;circle|green|86|70|66|50|106|90
-scene_0054.png,"green triangle below yellow square, with blue square as distractor(s)",square|yellow|173|48|153|28|193|68;square|blue|154|131|134|111|174|151;triangle|green|86|181|66|161|106|201
-scene_0055.png,"purple circle right of green circle, with red square and blue triangle as distractor(s)",square|red|144|155|124|135|164|175;triangle|blue|100|103|80|83|120|123;circle|green|84|43|64|23|104|63;circle|purple|193|52|173|32|213|72
-scene_0056.png,"blue square left of yellow square, with green circle and yellow circle and purple circle as distractor(s)",square|yellow|158|173|138|153|178|193;circle|green|104|59|84|39|124|79;circle|yellow|96|193|76|173|116|213;circle|purple|153|102|133|82|173|122;square|blue|40|126|20|106|60|146
-scene_0057.png,"yellow square below blue triangle, with blue square as distractor(s)",square|blue|109|113|89|93|129|133;triangle|blue|189|47|169|27|209|67;square|yellow|62|202|42|182|82|222
-scene_0058.png,"green square left of green circle, with red triangle and red circle as distractor(s)",square|green|139|120|119|100|159|140;triangle|red|77|102|57|82|97|122;circle|green|190|154|170|134|210|174;circle|red|206|94|186|74|226|114
-scene_0059.png,"yellow square left of blue triangle, with green circle and green square and red triangle as distractor(s)",circle|green|86|92|66|72|106|112;square|green|43|176|23|156|63|196;square|yellow|155|128|135|108|175|148;triangle|red|175|61|155|41|195|81;triangle|blue|214|174|194|154|234|194
-scene_0060.png,"yellow circle right of yellow triangle, with red triangle as distractor(s)",circle|yellow|203|80|183|60|223|100;triangle|yellow|46|95|26|75|66|115;triangle|red|47|189|27|169|67|209
-scene_0061.png,"red triangle left of green square, with blue triangle as distractor(s)",triangle|red|95|163|75|143|115|183;square|green|214|99|194|79|234|119;triangle|blue|89|63|69|43|109|83
-scene_0062.png,"purple triangle below yellow circle, with red triangle and red circle and purple circle as distractor(s)",triangle|red|165|54|145|34|185|74;circle|red|60|109|40|89|80|129;triangle|purple|129|173|109|153|149|193;circle|yellow|91|52|71|32|111|72;circle|purple|201|108|181|88|221|128
-scene_0063.png,"blue triangle right of blue square, with green square and yellow circle as distractor(s)",square|green|209|55|189|35|229|75;triangle|blue|207|138|187|118|227|158;square|blue|135|141|115|121|155|161;circle|yellow|146|45|126|25|166|65
-scene_0064.png,"purple circle below red square, with blue square and purple square and green circle as distractor(s)",square|blue|123|128|103|108|143|148;square|purple|180|156|160|136|200|176;square|red|109|45|89|25|129|65;circle|green|42|105|22|85|62|125;circle|purple|77|175|57|155|97|195
-scene_0065.png,"purple triangle above red square, with blue triangle and yellow circle as distractor(s)",square|red|174|193|154|173|194|213;triangle|blue|102|182|82|162|122|202;circle|yellow|83|104|63|84|103|124;triangle|purple|208|104|188|84|228|124
-scene_0066.png,"green square left of yellow square, with red square and red circle as distractor(s)",square|red|46|92|26|72|66|112;circle|red|123|215|103|195|143|235;square|yellow|171|95|151|75|191|115;square|green|98|130|78|110|118|150
-scene_0067.png,"red square left of purple square, with yellow triangle and yellow square as distractor(s)",triangle|yellow|90|181|70|161|110|201;square|red|49|101|29|81|69|121;square|purple|194|146|174|126|214|166;square|yellow|95|61|75|41|115|81
-scene_0068.png,"purple triangle below purple square, with green triangle and red circle as distractor(s)",triangle|green|78|175|58|155|98|195;square|purple|204|50|184|30|224|70;circle|red|115|47|95|27|135|67;triangle|purple|166|201|146|181|186|221
-scene_0069.png,"green triangle above yellow square, with green circle as distractor(s)",circle|green|42|110|22|90|62|130;square|yellow|155|185|135|165|175|205;triangle|green|147|122|127|102|167|142
-scene_0070.png,"green circle below red square, with purple square as distractor(s)",circle|green|100|172|80|152|120|192;square|red|57|108|37|88|77|128;square|purple|184|208|164|188|204|228
-scene_0071.png,"green circle below blue square, with yellow square as distractor(s)",square|blue|197|101|177|81|217|121;square|yellow|53|177|33|157|73|197;circle|green|141|166|121|146|161|186
-scene_0072.png,"red square right of yellow circle, with blue square and yellow triangle as distractor(s)",square|red|141|102|121|82|161|122;square|blue|199|75|179|55|219|95;circle|yellow|64|44|44|24|84|64;triangle|yellow|89|135|69|115|109|155
-scene_0073.png,"green square left of blue circle, with purple triangle and red triangle as distractor(s)",circle|blue|173|40|153|20|193|60;triangle|purple|161|128|141|108|181|148;triangle|red|145|197|125|177|165|217;square|green|57|126|37|106|77|146
-scene_0074.png,"purple triangle left of green circle, with blue square and yellow square and yellow circle as distractor(s)",triangle|purple|147|79|127|59|167|99;square|blue|121|208|101|188|141|228;circle|green|207|111|187|91|227|131;square|yellow|211|191|191|171|231|211;circle|yellow|82|129|62|109|102|149
-scene_0075.png,"red circle left of blue triangle, with green triangle and yellow triangle as distractor(s)",triangle|green|172|43|152|23|192|63;circle|red|45|151|25|131|65|171;triangle|yellow|84|58|64|38|104|78;triangle|blue|153|151|133|131|173|171
-scene_0076.png,"red circle above yellow square, with yellow circle and blue triangle as distractor(s)",square|yellow|151|187|131|167|171|207;circle|yellow|90|53|70|33|110|73;triangle|blue|83|189|63|169|103|209;circle|red|208|121|188|101|228|141
-scene_0077.png,"yellow triangle above blue square, with green circle as distractor(s)",square|blue|212|198|192|178|232|218;triangle|yellow|132|111|112|91|152|131;circle|green|60|157|40|137|80|177
-scene_0078.png,"yellow square left of green triangle, with yellow circle and yellow triangle and purple circle as distractor(s)",triangle|green|214|147|194|127|234|167;square|yellow|97|81|77|61|117|101;circle|yellow|145|134|125|114|165|154;triangle|yellow|64|176|44|156|84|196;circle|purple|201|52|181|32|221|72
-scene_0079.png,"red circle left of green square, with green circle and purple square and yellow square as distractor(s)",circle|green|91|193|71|173|111|213;square|purple|186|41|166|21|206|61;square|green|202|154|182|134|222|174;square|yellow|59|109|39|89|79|129;circle|red|133|102|113|82|153|122
-scene_0080.png,"red triangle below yellow circle, with yellow square and red square as distractor(s)",square|yellow|139|84|119|64|159|104;square|red|85|41|65|21|105|61;circle|yellow|196|147|176|127|216|167;triangle|red|158|201|138|181|178|221
-scene_0081.png,"red triangle below red square, with yellow triangle as distractor(s)",triangle|red|193|110|173|90|213|130;square|red|213|51|193|31|233|71;triangle|yellow|76|178|56|158|96|198
-scene_0082.png,"red triangle right of blue triangle, with red square and yellow square and blue square as distractor(s)",square|red|93|180|73|160|113|200;square|yellow|103|101|83|81|123|121;square|blue|154|200|134|180|174|220;triangle|blue|44|68|24|48|64|88;triangle|red|169|71|149|51|189|91
-scene_0083.png,"red square above purple square, with red circle and green square and yellow triangle as distractor(s)",square|red|216|52|196|32|236|72;square|purple|203|191|183|171|223|211;circle|red|87|89|67|69|107|109;square|green|68|160|48|140|88|180;triangle|yellow|206|123|186|103|226|143
-scene_0084.png,"red square above blue triangle, with green triangle as distractor(s)",triangle|green|120|42|100|22|140|62;square|red|141|118|121|98|161|138;triangle|blue|101|205|81|185|121|225
-scene_0085.png,"red square above purple square, with green square as distractor(s)",square|purple|194|159|174|139|214|179;square|green|114|208|94|188|134|228;square|red|204|59|184|39|224|79
-scene_0086.png,"red circle below yellow square, with purple square and green circle as distractor(s)",square|purple|169|189|149|169|189|209;circle|red|105|201|85|181|125|221;circle|green|159|129|139|109|179|149;square|yellow|99|132|79|112|119|152
-scene_0087.png,"red circle left of purple square, with yellow square and yellow circle and green circle as distractor(s)",square|yellow|175|76|155|56|195|96;circle|yellow|145|204|125|184|165|224;circle|red|41|136|21|116|61|156;circle|green|213|151|193|131|233|171;square|purple|104|110|84|90|124|130
-scene_0088.png,"purple circle below red triangle, with green triangle and red square and yellow square as distractor(s)",triangle|green|40|155|20|135|60|175;square|red|148|66|128|46|168|86;square|yellow|60|91|40|71|80|111;triangle|red|199|134|179|114|219|154;circle|purple|124|213|104|193|144|233
-scene_0089.png,"purple circle left of green circle, with red circle and blue circle and purple triangle as distractor(s)",circle|purple|84|164|64|144|104|184;circle|red|136|83|116|63|156|103;circle|blue|146|160|126|140|166|180;circle|green|202|56|182|36|222|76;triangle|purple|209|160|189|140|229|180
-scene_0090.png,"blue circle right of green square, with purple square and yellow square and green circle as distractor(s)",circle|blue|190|118|170|98|210|138;square|purple|81|55|61|35|101|75;square|yellow|102|173|82|153|122|193;square|green|49|125|29|105|69|145;circle|green|215|209|195|189|235|229
-scene_0091.png,"blue triangle right of green square, with red circle as distractor(s)",triangle|blue|136|94|116|74|156|114;circle|red|130|213|110|193|150|233;square|green|48|42|28|22|68|62
-scene_0092.png,"purple triangle below green triangle, with blue circle and red circle and red square as distractor(s)",circle|blue|62|81|42|61|82|101;circle|red|180|188|160|168|200|208;triangle|purple|143|102|123|82|163|122;triangle|green|178|48|158|28|198|68;square|red|107|200|87|180|127|220
-scene_0093.png,"purple triangle above red triangle, with yellow circle and green triangle as distractor(s)",circle|yellow|50|185|30|165|70|205;triangle|red|194|194|174|174|214|214;triangle|green|92|136|72|116|112|156;triangle|purple|155|133|135|113|175|153
-scene_0094.png,"blue square below yellow square, with blue circle and green square and green circle as distractor(s)",square|blue|72|149|52|129|92|169;circle|blue|131|185|111|165|151|205;square|green|60|208|40|188|80|228;square|yellow|88|54|68|34|108|74;circle|green|216|140|196|120|236|160
-scene_0095.png,"yellow square above blue square, with purple circle and yellow circle as distractor(s)",square|yellow|187|50|167|30|207|70;circle|purple|183|181|163|161|203|201;circle|yellow|78|72|58|52|98|92;square|blue|128|132|108|112|148|152
-scene_0096.png,"green square below red square, with yellow circle and blue triangle as distractor(s)",square|green|127|203|107|183|147|223;circle|yellow|141|116|121|96|161|136;triangle|blue|208|87|188|67|228|107;square|red|100|46|80|26|120|66
-scene_0097.png,"yellow square right of blue triangle, with green circle and purple square and red square as distractor(s)",circle|green|133|207|113|187|153|227;square|purple|173|162|153|142|193|182;square|red|71|159|51|139|91|179;triangle|blue|91|63|71|43|111|83;square|yellow|198|48|178|28|218|68
-scene_0098.png,"blue square above green square, with red circle and yellow square as distractor(s)",circle|red|68|139|48|119|88|159;square|blue|123|113|103|93|143|133;square|green|136|216|116|196|156|236;square|yellow|61|216|41|196|81|236
-scene_0099.png,"red triangle below red square, with yellow square and blue triangle as distractor(s)",square|yellow|163|118|143|98|183|138;triangle|red|60|191|40|171|80|211;square|red|113|64|93|44|133|84;triangle|blue|187|188|167|168|207|208
+scene_0000.png,purple circle below purple square,square|purple|67|59|47|39|87|79;circle|purple|167|191|147|171|187|211
+scene_0001.png,purple triangle above yellow triangle,triangle|purple|139|56|119|36|159|76;triangle|yellow|80|211|60|191|100|231
+scene_0002.png,blue circle left of blue triangle,triangle|blue|191|197|171|177|211|217;circle|blue|40|215|20|195|60|235
+scene_0003.png,red triangle left of yellow circle,triangle|red|93|171|73|151|113|191;circle|yellow|205|114|185|94|225|134
+scene_0004.png,blue triangle below red triangle,triangle|blue|104|165|84|145|124|185;triangle|red|47|77|27|57|67|97
+scene_0005.png,purple circle below red circle,circle|purple|127|209|107|189|147|229;circle|red|69|70|49|50|89|90
+scene_0006.png,yellow circle left of purple triangle,circle|yellow|62|204|42|184|82|224;triangle|purple|163|124|143|104|183|144
+scene_0007.png,blue triangle left of red triangle,triangle|blue|110|215|90|195|130|235;triangle|red|207|145|187|125|227|165
+scene_0008.png,blue triangle below blue circle,circle|blue|60|85|40|65|80|105;triangle|blue|108|180|88|160|128|200
+scene_0009.png,green triangle right of purple square,square|purple|73|153|53|133|93|173;triangle|green|209|135|189|115|229|155
+scene_0010.png,blue square left of yellow square,square|blue|45|212|25|192|65|232;square|yellow|204|67|184|47|224|87
+scene_0011.png,purple triangle above red circle,triangle|purple|203|56|183|36|223|76;circle|red|197|201|177|181|217|221
+scene_0012.png,green triangle left of purple square,triangle|green|92|94|72|74|112|114;square|purple|177|84|157|64|197|104
+scene_0013.png,blue circle left of blue triangle,circle|blue|67|193|47|173|87|213;triangle|blue|164|120|144|100|184|140
+scene_0014.png,yellow square above purple square,square|purple|96|166|76|146|116|186;square|yellow|194|56|174|36|214|76
+scene_0015.png,purple circle above green triangle,circle|purple|162|67|142|47|182|87;triangle|green|135|203|115|183|155|223
+scene_0016.png,yellow triangle above red square,triangle|yellow|139|97|119|77|159|117;square|red|125|158|105|138|145|178
+scene_0017.png,blue circle right of purple triangle,circle|blue|187|76|167|56|207|96;triangle|purple|87|105|67|85|107|125
+scene_0018.png,green circle right of green triangle,circle|green|142|125|122|105|162|145;triangle|green|79|91|59|71|99|111
+scene_0019.png,purple circle above purple square,square|purple|87|179|67|159|107|199;circle|purple|156|67|136|47|176|87
+scene_0020.png,blue triangle right of green square,triangle|blue|166|113|146|93|186|133;square|green|93|82|73|62|113|102
+scene_0021.png,purple triangle below red triangle,triangle|purple|171|177|151|157|191|197;triangle|red|141|89|121|69|161|109
+scene_0022.png,red triangle right of blue square,square|blue|72|57|52|37|92|77;triangle|red|210|110|190|90|230|130
+scene_0023.png,yellow triangle left of yellow circle,triangle|yellow|98|200|78|180|118|220;circle|yellow|167|153|147|133|187|173
+scene_0024.png,green triangle below blue square,square|blue|202|76|182|56|222|96;triangle|green|175|177|155|157|195|197
+scene_0025.png,yellow circle left of red circle,circle|yellow|85|84|65|64|105|104;circle|red|212|183|192|163|232|203
+scene_0026.png,green circle below red square,square|red|194|46|174|26|214|66;circle|green|79|200|59|180|99|220
+scene_0027.png,green circle left of yellow triangle,triangle|yellow|195|145|175|125|215|165;circle|green|47|162|27|142|67|182
+scene_0028.png,red triangle left of blue circle,triangle|red|111|51|91|31|131|71;circle|blue|162|85|142|65|182|105
+scene_0029.png,yellow triangle below yellow square,square|yellow|201|54|181|34|221|74;triangle|yellow|166|198|146|178|186|218
+scene_0030.png,green triangle left of purple circle,circle|purple|201|144|181|124|221|164;triangle|green|116|83|96|63|136|103
+scene_0031.png,blue circle above red square,circle|blue|189|140|169|120|209|160;square|red|131|202|111|182|151|222
+scene_0032.png,purple circle below green square,square|green|75|136|55|116|95|156;circle|purple|81|208|61|188|101|228
+scene_0033.png,blue square left of purple square,square|blue|60|125|40|105|80|145;square|purple|108|86|88|66|128|106
+scene_0034.png,blue circle left of green triangle,triangle|green|178|60|158|40|198|80;circle|blue|77|91|57|71|97|111
+scene_0035.png,red triangle right of blue triangle,triangle|blue|88|107|68|87|108|127;triangle|red|150|143|130|123|170|163
+scene_0036.png,green circle right of blue square,circle|green|198|168|178|148|218|188;square|blue|119|167|99|147|139|187
+scene_0037.png,blue triangle above red circle,triangle|blue|131|54|111|34|151|74;circle|red|181|136|161|116|201|156
+scene_0038.png,red triangle right of green triangle,triangle|green|69|159|49|139|89|179;triangle|red|142|195|122|175|162|215
+scene_0039.png,purple triangle below green circle,triangle|purple|135|179|115|159|155|199;circle|green|198|92|178|72|218|112
+scene_0040.png,purple triangle below yellow square,square|yellow|118|63|98|43|138|83;triangle|purple|74|195|54|175|94|215
+scene_0041.png,purple circle left of blue triangle,circle|purple|69|69|49|49|89|89;triangle|blue|160|48|140|28|180|68
+scene_0042.png,blue square right of blue circle,square|blue|184|150|164|130|204|170;circle|blue|128|103|108|83|148|123
+scene_0043.png,red square left of purple triangle,square|red|97|162|77|142|117|182;triangle|purple|216|161|196|141|236|181
+scene_0044.png,blue square below green triangle,square|blue|170|169|150|149|190|189;triangle|green|116|47|96|27|136|67
+scene_0045.png,blue square below red triangle,triangle|red|127|87|107|67|147|107;square|blue|42|213|22|193|62|233
+scene_0046.png,blue triangle below blue square,square|blue|70|92|50|72|90|112;triangle|blue|183|210|163|190|203|230
+scene_0047.png,yellow square below yellow circle,square|yellow|80|133|60|113|100|153;circle|yellow|81|67|61|47|101|87
+scene_0048.png,red square below green square,square|red|42|194|22|174|62|214;square|green|44|94|24|74|64|114
+scene_0049.png,green triangle right of yellow triangle,triangle|yellow|62|81|42|61|82|101;triangle|green|173|142|153|122|193|162
+scene_0050.png,purple circle above green circle,circle|green|150|187|130|167|170|207;circle|purple|209|71|189|51|229|91
+scene_0051.png,yellow circle left of red circle,circle|yellow|90|202|70|182|110|222;circle|red|206|151|186|131|226|171
+scene_0052.png,yellow square below red circle,circle|red|202|44|182|24|222|64;square|yellow|121|211|101|191|141|231
+scene_0053.png,purple circle below purple triangle,circle|purple|98|167|78|147|118|187;triangle|purple|138|52|118|32|158|72
+scene_0054.png,yellow triangle above green square,square|green|207|187|187|167|227|207;triangle|yellow|176|70|156|50|196|90
+scene_0055.png,green circle below yellow circle,circle|yellow|63|50|43|30|83|70;circle|green|49|145|29|125|69|165
+scene_0056.png,yellow square right of blue square,square|blue|53|125|33|105|73|145;square|yellow|124|62|104|42|144|82
+scene_0057.png,blue triangle below purple circle,circle|purple|88|87|68|67|108|107;triangle|blue|130|207|110|187|150|227
+scene_0058.png,green circle below green square,square|green|99|44|79|24|119|64;circle|green|191|202|171|182|211|222
+scene_0059.png,blue triangle above blue circle,triangle|blue|211|77|191|57|231|97;circle|blue|164|203|144|183|184|223
+scene_0060.png,red circle above purple square,square|purple|140|141|120|121|160|161;circle|red|139|43|119|23|159|63
+scene_0061.png,red circle left of red square,square|red|175|108|155|88|195|128;circle|red|40|133|20|113|60|153
+scene_0062.png,green square below green triangle,square|green|150|195|130|175|170|215;triangle|green|70|62|50|42|90|82
+scene_0063.png,blue circle above blue triangle,circle|blue|183|136|163|116|203|156;triangle|blue|163|209|143|189|183|229
+scene_0064.png,red square above green triangle,triangle|green|107|184|87|164|127|204;square|red|119|55|99|35|139|75
+scene_0065.png,yellow square above blue circle,square|yellow|138|57|118|37|158|77;circle|blue|188|159|168|139|208|179
+scene_0066.png,yellow triangle above green triangle,triangle|yellow|90|105|70|85|110|125;triangle|green|177|206|157|186|197|226
+scene_0067.png,yellow triangle above green square,square|green|208|196|188|176|228|216;triangle|yellow|164|43|144|23|184|63
+scene_0068.png,yellow circle below blue triangle,circle|yellow|144|114|124|94|164|134;triangle|blue|171|40|151|20|191|60
+scene_0069.png,yellow circle below blue circle,circle|yellow|160|170|140|150|180|190;circle|blue|187|100|167|80|207|120
+scene_0070.png,purple triangle right of purple square,square|purple|128|54|108|34|148|74;triangle|purple|189|88|169|68|209|108
+scene_0071.png,purple triangle below yellow square,square|yellow|164|72|144|52|184|92;triangle|purple|170|199|150|179|190|219
+scene_0072.png,purple square left of yellow square,square|yellow|117|76|97|56|137|96;square|purple|57|55|37|35|77|75
+scene_0073.png,red circle left of blue circle,circle|red|152|81|132|61|172|101;circle|blue|199|41|179|21|219|61
+scene_0074.png,purple square below green triangle,triangle|green|152|41|132|21|172|61;square|purple|166|200|146|180|186|220
+scene_0075.png,red circle left of yellow square,square|yellow|137|158|117|138|157|178;circle|red|44|199|24|179|64|219
+scene_0076.png,yellow circle right of yellow triangle,circle|yellow|190|112|170|92|210|132;triangle|yellow|92|86|72|66|112|106
+scene_0077.png,yellow circle below purple square,circle|yellow|73|185|53|165|93|205;square|purple|73|48|53|28|93|68
+scene_0078.png,green triangle right of yellow square,triangle|green|212|142|192|122|232|162;square|yellow|144|157|124|137|164|177
+scene_0079.png,yellow triangle right of purple triangle,triangle|purple|54|174|34|154|74|194;triangle|yellow|152|168|132|148|172|188
+scene_0080.png,purple triangle right of yellow triangle,triangle|yellow|66|111|46|91|86|131;triangle|purple|204|208|184|188|224|228
+scene_0081.png,purple triangle left of green triangle,triangle|green|189|69|169|49|209|89;triangle|purple|58|117|38|97|78|137
+scene_0082.png,yellow triangle below blue triangle,triangle|yellow|187|186|167|166|207|206;triangle|blue|171|118|151|98|191|138
+scene_0083.png,red circle right of purple triangle,triangle|purple|60|144|40|124|80|164;circle|red|150|170|130|150|170|190
+scene_0084.png,blue circle above red circle,circle|red|199|178|179|158|219|198;circle|blue|104|43|84|23|124|63
+scene_0085.png,blue circle below blue triangle,circle|blue|95|137|75|117|115|157;triangle|blue|73|43|53|23|93|63
+scene_0086.png,purple triangle right of red square,triangle|purple|178|54|158|34|198|74;square|red|90|57|70|37|110|77
+scene_0087.png,purple triangle left of yellow circle,circle|yellow|169|205|149|185|189|225;triangle|purple|60|110|40|90|80|130
+scene_0088.png,red circle below green triangle,circle|red|111|202|91|182|131|222;triangle|green|154|120|134|100|174|140
+scene_0089.png,blue square below yellow square,square|blue|123|195|103|175|143|215;square|yellow|216|73|196|53|236|93
+scene_0090.png,yellow triangle below purple circle,circle|purple|123|59|103|39|143|79;triangle|yellow|92|146|72|126|112|166
+scene_0091.png,green circle left of green square,square|green|135|147|115|127|155|167;circle|green|60|213|40|193|80|233
+scene_0092.png,purple square left of yellow square,square|purple|87|171|67|151|107|191;square|yellow|214|81|194|61|234|101
+scene_0093.png,red circle right of purple square,square|purple|120|100|100|80|140|120;circle|red|206|66|186|46|226|86
+scene_0094.png,green circle above blue square,square|blue|161|183|141|163|181|203;circle|green|156|122|136|102|176|142
+scene_0095.png,blue square left of green square,square|blue|60|47|40|27|80|67;square|green|160|59|140|39|180|79
+scene_0096.png,purple circle below yellow circle,circle|yellow|45|51|25|31|65|71;circle|purple|139|200|119|180|159|220
+scene_0097.png,blue square below blue triangle,triangle|blue|156|146|136|126|176|166;square|blue|192|204|172|184|212|224
+scene_0098.png,yellow triangle above red triangle,triangle|yellow|127|45|107|25|147|65;triangle|red|211|167|191|147|231|187
+scene_0099.png,blue circle above yellow square,square|yellow|49|195|29|175|69|215;circle|blue|84|52|64|32|104|72
