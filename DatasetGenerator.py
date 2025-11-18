@@ -57,7 +57,8 @@ def compute_bbox(center, size):
 
 def generate_scene(image_id):
     """Generate one synthetic image with multiple shapes and return its caption, main logic of the code."""
-    num_shapes = random.choice([3, 4, 5])
+    # num_shapes = random.choice([3, 4, 5]) with distractors
+    num_shapes = 2  # without distractors
     shapes_data = []
     used_positions = []
     used_shape_color_pairs = set()

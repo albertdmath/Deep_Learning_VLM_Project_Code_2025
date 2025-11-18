@@ -1,20 +1,23 @@
 from pathlib import Path
 from PIL import Image
 import torch
-from transformers import AutoProcessor, LlavaOnevisionForConditionalGeneration
+from transformers import AutoProcessor, AutoModelForVision2Seq
 import pandas as pd
 
 # ------------------------
 # SETUP
 # ------------------------
-model_id = "llava-hf/llava-onevision-qwen2-0.5b-ov-hf"
+model_id = "Qwen/Qwen2-VL-2B-Instruct"
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+dtype = torch.float16 if device == "cuda" else torch.float32
 
 print("Loading model...")
-model = LlavaOnevisionForConditionalGeneration.from_pretrained(
-    model_id, 
-    dtype=torch.float16, 
-    low_cpu_mem_usage=True, 
-).to("cuda")
+model = AutoModelForVision2Seq.from_pretrained(
+    model_id,
+    torch_dtype=dtype,
+    low_cpu_mem_usage=True,
+).to(device)
 
 print("Loading processor...")
 processor = AutoProcessor.from_pretrained(model_id)
@@ -42,30 +45,35 @@ files = sorted(folder.glob("*.png"))
 
 print(f"Found {len(files)} images.")
 
-for prompt, img_path in zip(simple_captions, files):
+for prompt_text, img_path in zip(simple_captions, files):
     print(f"Processing {img_path.name}...")
 
     # Load image
     raw_image = Image.open(img_path).convert("RGB")
 
-    # Build conversation prompt
+    # Build conversation prompt (Qwen2-VL format)
     conversation = [
         {
             "role": "user",
             "content": [
-                {"type": "text", "text": prompt},
                 {"type": "image"},
+                {"type": "text", "text": prompt_text},
             ],
         },
     ]
-    prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
+
+    chat_prompt = processor.apply_chat_template(
+        conversation,
+        add_generation_prompt=True
+    )
 
     # Prepare model inputs
     inputs = processor(
-        images=raw_image,
-        text=prompt,
-        return_tensors='pt'
-    ).to("cuda", torch.float16)
+        images=[raw_image],
+        text=[chat_prompt],
+        return_tensors="pt",
+        padding=True,
+    ).to(device, dtype)
 
     # Generate output
     with torch.no_grad():
@@ -76,7 +84,12 @@ for prompt, img_path in zip(simple_captions, files):
         )
 
     prompt_len = inputs["input_ids"].shape[1]
-    text = processor.decode(output_ids[0][prompt_len:], skip_special_tokens=True)
+
+    # Decode only the generated answer (without the prompt tokens)
+    text = processor.batch_decode(
+        output_ids[:, prompt_len:],
+        skip_special_tokens=True
+    )[0]
 
     # Save to file
     with output_file.open("a") as f:
