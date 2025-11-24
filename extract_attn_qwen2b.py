@@ -27,13 +27,10 @@ processor = AutoProcessor.from_pretrained(model_id)
 
 folder = Path("./synthetic_dataset")
 annotations_path = folder / "annotations.jsonl"
-output_file = Path("inference_results.txt")
 
 attn_folder = Path("attentions_qwen2b")
 attn_folder.mkdir(exist_ok=True)
 
-# Clean output file
-output_file.write_text("")
 
 # ------------------------
 # LOAD ALL JSON ANNOTATIONS
@@ -128,29 +125,4 @@ for img_path in files:
         attn_folder / f"{scene_id}_attn.pt",
     )
 
-    # --------------------------------------
-    # 2) GENERATION
-    # --------------------------------------
-    with torch.no_grad():
-        output_ids = model.generate(
-            **inputs,
-            max_new_tokens=200,
-            do_sample=False
-        )
-
-    # Only decode the generated text (skip prompt tokens)
-    prompt_len = inputs["input_ids"].shape[1]
-    text = processor.batch_decode(
-        output_ids[:, prompt_len:],
-        skip_special_tokens=True
-    )[0]
-
-    # Save results
-    with output_file.open("a") as f:
-        f.write(f"Image: {img_path.name}\n")
-        f.write(f"Prompt: {prompt_text}\n")
-        f.write(f"Output: {text}\n")
-        f.write("-" * 60 + "\n")
-
-print(f"\nAll done. Results saved to: {output_file.resolve()}")
-print(f"Attention tensors saved under: {attn_folder.resolve()}")
+print(f"\nAll done. Attention tensors saved under: {attn_folder.resolve()}")
