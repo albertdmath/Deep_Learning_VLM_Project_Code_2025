@@ -1,21 +1,27 @@
-=== PROJECT ===
-VLM project for deep learning course ethz 2025.
+# Attention Alignment in Vision–Language Models
 
-=== HELPFUL LINKS (STUDENT CLUSTER) ===
-https://www.isg.inf.ethz.ch/HelpClusterComputingStudentCluster
-https://www.isg.inf.ethz.ch/Main/HelpClusterComputingStudentClusterRunningJobs
+This project analyzes how attention in Vision–Language Models aligns with ground-truth object regions in synthetic scenes with spatial relations (e.g., “left of”, “between”).
 
-=== FOR GPU USAGE (STUDENT CLUSTER) ===
-# Copy local folder to remote with scp
-scp -r /path/to/my_project your_username@student-cluster.inf.ethz.ch:~
-ssh your_username@student-cluster.inf.ethz.ch
-module load cuda/12.9
-srun --pty -A deep_learning -t 60 bash
+We extract cross-attention maps for ~5k scenes and evaluate whether correct predictions are supported by meaningful visual grounding or by shortcuts such as language bias or center bias.
 
-# Create a python virtual environment (important)
-python3 -m venv venv
-source venv/bin/activate
-pip install --upgrade pip
-pip install transformers torch torchvision
-python3 load_vlm_model.py
+## What we measure
+- IoU with object masks  
+- Center-of-mass distance  
+- Entropy  
+- Mutual information with scene variables  
 
+## What we study
+- Entity vs relation token grounding  
+- Layer and head specialization  
+- Attention differences between correct and incorrect predictions  
+- Sensitivity to task difficulty (distractors, layouts, relation type)  
+
+## Output
+Tabular metrics per scene, token, layer, and head, with:
+- error-conditioned analysis  
+- head clustering  
+- complexity curves  
+- attention–performance correlations
+
+## Goal
+Quantify when and where VLM attention reflects true visual reasoning vs spurious behavior.
