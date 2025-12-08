@@ -9,6 +9,7 @@ import jsonlines   # pip install jsonlines
 # SETUP
 # ------------------------
 model_id = "Qwen/Qwen2-VL-2B-Instruct"
+BATCH_SIZE = 16   # adjust based on VRAM
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 dtype = torch.bfloat16 if device == "cuda" else torch.float32
@@ -45,50 +46,64 @@ with jsonlines.open(annotations_path) as reader:
 print(f"Loaded {len(annotations)} annotation entries.")
 
 # ------------------------
-# PROCESS IMAGES
+# PROCESS IMAGES (BATCHED)
 # ------------------------
 files = sorted(folder.glob("*.png"))
 print(f"Found {len(files)} images.")
 
-for img_path in files:
-    scene_id = img_path.stem            # "scene_0001"
-    if scene_id not in annotations:
-        print(f"Warning: No annotation found for {img_path.name}")
+def chunked(lst, n):
+    for i in range(0, len(lst), n):
+        yield lst[i:i + n]
+
+for batch_files in chunked(files, BATCH_SIZE):
+    images = []
+    prompts = []
+    metadata = []
+
+    for img_path in batch_files:
+        scene_id = img_path.stem
+        if scene_id not in annotations:
+            print(f"Warning: No annotation found for {img_path.name}")
+            continue
+
+        record = annotations[scene_id]
+        prompt_text = record["caption_prompt"]
+
+        raw_image = Image.open(img_path).convert("RGB")
+
+        conversation = [
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image"},
+                    {"type": "text", "text": prompt_text},
+                ],
+            }
+        ]
+
+        chat_prompt = processor.apply_chat_template(
+            conversation,
+            add_generation_prompt=True
+        )
+
+        images.append(raw_image)
+        prompts.append(chat_prompt)
+        metadata.append((img_path.name, prompt_text))
+
+    if len(images) == 0:
         continue
 
-    record = annotations[scene_id]
-    prompt_text = record["caption_prompt"]
+    print(f"Processing batch of {len(images)} images...")
 
-    print(f"Processing {img_path.name}...")
-
-    # Load image
-    raw_image = Image.open(img_path).convert("RGB")
-
-    # Build Qwen2-VL chat prompt
-    conversation = [
-        {
-            "role": "user",
-            "content": [
-                {"type": "image"},
-                {"type": "text", "text": prompt_text},
-            ],
-        },
-    ]
-
-    chat_prompt = processor.apply_chat_template(
-        conversation,
-        add_generation_prompt=True
-    )
-
-    # Prepare model inputs
+    # Prepare batched inputs
     inputs = processor(
-        images=[raw_image],
-        text=[chat_prompt],
+        images=images,
+        text=prompts,
         return_tensors="pt",
         padding=True,
     ).to(device, dtype)
 
-    # Generate output
+    # Generate outputs for batch
     with torch.no_grad():
         output_ids = model.generate(
             **inputs,
@@ -96,18 +111,20 @@ for img_path in files:
             do_sample=False
         )
 
-    # Only decode the generated text
+    # Decode per sample (strip prompt)
     prompt_len = inputs["input_ids"].shape[1]
-    text = processor.batch_decode(
+    decoded = processor.batch_decode(
         output_ids[:, prompt_len:],
         skip_special_tokens=True
-    )[0]
+    )
 
-    # Save results
+    # Write batch results
     with output_file.open("a") as f:
-        f.write(f"Image: {img_path.name}\n")
-        f.write(f"Prompt: {prompt_text}\n")
-        f.write(f"Output: {text}\n")
-        f.write("-" * 60 + "\n")
+        for (img_name, prompt), text in zip(metadata, decoded):
+            f.write(f"Image: {img_name}\n")
+            f.write(f"Prompt: {prompt}\n")
+            f.write(f"Output: {text}\n")
+            f.write("-" * 60 + "\n")
 
 print(f"\nAll done. Results saved to: {output_file.resolve()}")
+

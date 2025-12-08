@@ -2,11 +2,12 @@ import os
 import random
 import math
 import json
+from tqdm import tqdm
 from PIL import Image, ImageDraw
 
 # === Configuration and Setup ===
 OUTPUT_DIR = "synthetic_dataset"
-NUM_IMAGES = 100
+NUM_IMAGES = 5000
 IMG_SIZE = 256
 SHAPE_SIZE = 40
 SHAPES = ["circle", "square", "triangle"]
@@ -17,6 +18,7 @@ COLORS = {
     "yellow": (255, 255, 0),
     "purple": (160, 32, 240)
 }
+SEED = 5122025
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
@@ -84,7 +86,7 @@ def generate_scene(image_id):
     - a_idx, b_idx: indices of the two main shapes
     - relation_raw: 'left of', 'right of', 'above', 'below' (A relative to B)
     """
-    num_shapes = random.choice([3, 4, 5])  # with distractors
+    num_shapes = random.choice([8, 9, 10, 11, 12])  # with distractors
     shapes_data = []
     used_positions = []
     used_shape_color_pairs = set()
@@ -98,13 +100,13 @@ def generate_scene(image_id):
                 used_shape_color_pairs.add((shape, color_name))
                 break
 
-        # Ensure shapes don't overlap too much
+        # Ensure shapes don't overlap too much - this can go on forever...
         while True:
             center = (
                 random.randint(SHAPE_SIZE, IMG_SIZE - SHAPE_SIZE),
                 random.randint(SHAPE_SIZE, IMG_SIZE - SHAPE_SIZE),
             )
-            if all(math.dist(center, p) > 60 for p in used_positions):
+            if all(math.dist(center, p) > 40 for p in used_positions):
                 used_positions.append(center)
                 break
 
@@ -128,57 +130,58 @@ def generate_scene(image_id):
 
     return filename, caption, shapes_data, a_idx, b_idx, relation_raw
 
+if __name__ == "__main__":
+    # === Generate dataset and JSONL annotations ===
+    jsonl_path = os.path.join(OUTPUT_DIR, "annotations.jsonl")
 
-# === Generate dataset and JSONL annotations ===
-jsonl_path = os.path.join(OUTPUT_DIR, "annotations.jsonl")
+    random.seed(SEED)
+    with open(jsonl_path, "w") as jsonl_file:
+        for i in tqdm(range(NUM_IMAGES)):
+            filename, caption, shapes_data, a_idx, b_idx, relation_raw = generate_scene(i)
 
-with open(jsonl_path, "w") as jsonl_file:
-    for i in range(NUM_IMAGES):
-        filename, caption, shapes_data, a_idx, b_idx, relation_raw = generate_scene(i)
+            # Convert relation phrase to compact code: "left of" -> "A_left_of_B"
+            relation_type = "A_" + relation_raw.replace(" ", "_") + "_B"
 
-        # Convert relation phrase to compact code: "left of" -> "A_left_of_B"
-        relation_type = "A_" + relation_raw.replace(" ", "_") + "_B"
+            # Extract A data
+            shape_a, color_a, _, center_a, bbox_a = shapes_data[a_idx]
+            # Extract B data
+            shape_b, color_b, _, center_b, bbox_b = shapes_data[b_idx]
 
-        # Extract A data
-        shape_a, color_a, _, center_a, bbox_a = shapes_data[a_idx]
-        # Extract B data
-        shape_b, color_b, _, center_b, bbox_b = shapes_data[b_idx]
+            num_distractors = len(shapes_data) - 2
 
-        num_distractors = len(shapes_data) - 2
+            # Natural-language version for the prompt
+            relation_nl = {
+                "left of": "to the left of",
+                "right of": "to the right of",
+                "above": "above",
+                "below": "below"
+            }[relation_raw]
 
-        # Natural-language version for the prompt
-        relation_nl = {
-            "left of": "to the left of",
-            "right of": "to the right of",
-            "above": "above",
-            "below": "below"
-        }[relation_raw]
+            caption_prompt = (
+                f"Is the {color_a} {shape_a} {relation_nl} the {color_b} {shape_b}?"
+            )
 
-        caption_prompt = (
-            f"Is the {color_a} {shape_a} {relation_nl} the {color_b} {shape_b}?"
-        )
+            # Build JSON exactly as the user specified
+            record = {
+                "scene_id": filename.replace(".png", ""),
+                "A": {
+                    "shape": shape_a,
+                    "color": color_a,
+                    "center": [center_a[0], center_a[1]],
+                    "bbox": [bbox_a[0], bbox_a[1], bbox_a[2], bbox_a[3]]
+                },
+                "B": {
+                    "shape": shape_b,
+                    "color": color_b,
+                    "center": [center_b[0], center_b[1]],
+                    "bbox": [bbox_b[0], bbox_b[1], bbox_b[2], bbox_b[3]]
+                },
+                "relation_AB": relation_type,
+                "num_distractors": num_distractors,
+                "caption_prompt": caption_prompt
+            }
 
-        # Build JSON exactly as the user specified
-        record = {
-            "scene_id": filename.replace(".png", ""),
-            "A": {
-                "shape": shape_a,
-                "color": color_a,
-                "center": [center_a[0], center_a[1]],
-                "bbox": [bbox_a[0], bbox_a[1], bbox_a[2], bbox_a[3]]
-            },
-            "B": {
-                "shape": shape_b,
-                "color": color_b,
-                "center": [center_b[0], center_b[1]],
-                "bbox": [bbox_b[0], bbox_b[1], bbox_b[2], bbox_b[3]]
-            },
-            "relation_AB": relation_type,
-            "num_distractors": num_distractors,
-            "caption_prompt": caption_prompt
-        }
-
-        jsonl_file.write(json.dumps(record) + "\n")
+            jsonl_file.write(json.dumps(record) + "\n")
 
 
-print(f"\nGenerated {NUM_IMAGES} images in '{OUTPUT_DIR}' and 'annotations.jsonl' with JSON ground truth.")
+    print(f"\nGenerated {NUM_IMAGES} images in '{OUTPUT_DIR}' and 'annotations.jsonl' with JSON ground truth.")
