@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw
 OUTPUT_DIR = "synthetic_dataset"
 NUM_IMAGES = 5000
 IMG_SIZE = 256
-SHAPE_SIZE = 40
+SHAPE_SIZE = 45
 SHAPES = ["circle", "square", "triangle"]
 COLORS = {
     "red": (255, 0, 0),
@@ -86,7 +86,7 @@ def generate_scene(image_id):
     - a_idx, b_idx: indices of the two main shapes
     - relation_raw: 'left of', 'right of', 'above', 'below' (A relative to B)
     """
-    num_shapes = random.choice([8, 9, 10, 11, 12])  # with distractors
+    num_shapes = random.choice([3, 4, 5, 6, 7, 8, 9])  # with distractors
     shapes_data = []
     used_positions = []
     used_shape_color_pairs = set()
@@ -106,7 +106,7 @@ def generate_scene(image_id):
                 random.randint(SHAPE_SIZE, IMG_SIZE - SHAPE_SIZE),
                 random.randint(SHAPE_SIZE, IMG_SIZE - SHAPE_SIZE),
             )
-            if all(math.dist(center, p) > 40 for p in used_positions):
+            if all(math.dist(center, p) > 45 for p in used_positions):
                 used_positions.append(center)
                 break
 

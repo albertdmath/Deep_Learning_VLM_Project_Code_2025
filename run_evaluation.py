@@ -3,8 +3,8 @@ import numpy as np
 import jsonlines
 import h5py
 from transformers import AutoTokenizer
-from attention_extraction import yield_attention_batches
-from attention_analysis import *
+from attn_tools.attention_extraction import yield_attention_batches
+from attn_tools.attention_metrics import *
 
 # ---------------------------
 # CONFIG

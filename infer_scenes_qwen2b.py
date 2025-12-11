@@ -121,10 +121,7 @@ for batch_files in chunked(files, BATCH_SIZE):
     # Write batch results
     with output_file.open("a") as f:
         for (img_name, prompt), text in zip(metadata, decoded):
-            f.write(f"Image: {img_name}\n")
-            f.write(f"Prompt: {prompt}\n")
-            f.write(f"Output: {text}\n")
-            f.write("-" * 60 + "\n")
+            f.write(f"{text}\n")
 
 print(f"\nAll done. Results saved to: {output_file.resolve()}")
 
