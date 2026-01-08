@@ -25,3 +25,27 @@ Tabular metrics per scene, token, layer, and head, with:
 
 ## Goal
 Quantify when and where VLM attention reflects true visual reasoning vs spurious behavior.
+
+## Generating Figures
+
+Generate attention visualizations on-demand (requires GPU):
+
+```bash
+# Heatmap only
+python visualize_attention_map.py scene_0042 15 8
+
+# Side-by-side: image + heatmap
+python visualize_attention_map.py scene_0100 20 7 --with-image
+
+# With overlay: image + overlay + heatmap
+python visualize_attention_map.py scene_0200 25 11 --with-image --overlay
+
+# Visualize object tokens instead of relation token
+python visualize_attention_map.py scene_0075 18 5 --with-image --overlay --token A
+python visualize_attention_map.py scene_0075 18 5 --with-image --overlay --token B
+
+# Adjust transparency or colormap
+python visualize_attention_map.py scene_0300 15 9 --with-image --overlay --alpha 0.4 --cmap viridis
+```
+
+**Outputs**: Saved to `visualizations/heatmaps/`, `visualizations/combined/`, or `visualizations/overlays/` depending on options.
