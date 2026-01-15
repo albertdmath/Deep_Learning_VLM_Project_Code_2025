@@ -238,12 +238,11 @@ def visualize_attention_with_image(
     alpha: float = 0.6
 ):
     """
-    Generate a side-by-side visualization showing the original image and attention heatmap.
+    Generate a visualization showing attention overlaid on the original image.
 
-    This creates a figure with two or three subplots:
-    - Left: Original scene image
-    - Middle (if overlay=True): Attention overlay on image
-    - Right: Attention heatmap over visual patches
+    This creates a figure with:
+    - If overlay=True: Single plot with attention heatmap overlaid on the image
+    - If overlay=False: Two subplots (original image and heatmap side-by-side)
 
     Args:
         scene_id: Scene identifier (e.g., "scene_0042")
@@ -254,7 +253,7 @@ def visualize_attention_with_image(
                      "visualizations/{scene_id}_L{layer}_H{head}_{token_type}_combined.png"
         cmap: Matplotlib colormap name (default: "hot")
         show_grid: Whether to show grid lines on the heatmap (default: True)
-        overlay: Whether to add a middle subplot with attention overlaid on image (default: False)
+        overlay: If True, show only overlay plot; if False, show image and heatmap side-by-side (default: False)
         alpha: Transparency for overlay (0=transparent, 1=opaque) (default: 0.6)
 
     Returns:
@@ -372,41 +371,20 @@ def visualize_attention_with_image(
     print(f"Saving combined visualization to {output_path}...")
 
     if overlay:
-        # Three subplots: image, overlay, heatmap
-        fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(18, 5))
+        # Single plot: overlay attention on image
+        fig, ax = plt.subplots(1, 1, figsize=(8, 8))
 
-        # Left: Original image
-        ax1.imshow(image)
-        ax1.axis('off')
-        ax1.set_title(f'Original Image\n{prompt}', fontsize=10)
-
-        # Middle: Overlay attention on image
         from scipy.ndimage import zoom
         # Upsample attention grid to image size (256x256)
         img_size = image.size[0]  # Should be 256
         zoom_factor = img_size / SIDE
         attn_upsampled = zoom(attn_grid_normalized, zoom_factor, order=1)
 
-        ax2.imshow(image)
-        im_overlay = ax2.imshow(attn_upsampled, cmap=cmap, alpha=alpha, interpolation='bilinear')
-        ax2.axis('off')
-        ax2.set_title(f'Attention Overlay\nAlpha={alpha}', fontsize=10)
-
-        # Right: Attention heatmap
-        im = ax3.imshow(attn_grid_normalized, cmap=cmap, interpolation='nearest')
-        cbar = plt.colorbar(im, ax=ax3, fraction=0.046, pad=0.04)
-        cbar.set_label('Attention Weight', rotation=270, labelpad=15)
-
-        if show_grid:
-            ax3.set_xticks(np.arange(SIDE) - 0.5, minor=True)
-            ax3.set_yticks(np.arange(SIDE) - 0.5, minor=True)
-            ax3.grid(which="minor", color="gray", linestyle='-', linewidth=0.5, alpha=0.3)
-
-        ax3.set_xticks(np.arange(SIDE))
-        ax3.set_yticks(np.arange(SIDE))
-        ax3.set_xlabel('Patch Column')
-        ax3.set_ylabel('Patch Row')
-        ax3.set_title(f'Attention Heatmap\nLayer {layer}, Head {head}, Token: "{target_word}"')
+        ax.imshow(image)
+        im_overlay = ax.imshow(attn_upsampled, cmap=cmap, alpha=alpha, interpolation='bilinear')
+        ax.axis('off')
+        ax.set_title(f'Layer {layer}, Head {head} | Token: "{target_word}"\n{prompt}',
+                    fontsize=12, fontweight='bold', pad=15)
     else:
         # Two subplots: image, heatmap
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
