@@ -2,8 +2,8 @@
 Utility for generating attention heatmaps on-demand for specific scenes.
 
 This module runs inference for individual scenes and extracts attention patterns
-from specific transformer layers and heads. Use this to generate a small number
-of figures for your report.
+from specific transformer layers and heads. we can use this to generate a small number
+of figures for the report.
 
 Usage:
     python visualize_attention_map.py scene_0042 15 8
