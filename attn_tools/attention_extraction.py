@@ -105,9 +105,7 @@ def yield_attention_batches(
                 "attentions": attn[:, i],
             }
 
-    # ------------------------
-    # STREAM JSONL
-    # ------------------------
+    # Stream JSONL
     batch = []
 
     with jsonlines.open(jsonl_path) as reader:
@@ -117,6 +115,6 @@ def yield_attention_batches(
                 yield from run_batch(batch)
                 batch.clear()
 
-        # flush last partial batch
+        # last partial batch
         if batch:
             yield from run_batch(batch)

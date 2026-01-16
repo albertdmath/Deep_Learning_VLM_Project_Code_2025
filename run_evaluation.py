@@ -6,9 +6,8 @@ from transformers import AutoTokenizer
 from attn_tools.attention_extraction import yield_attention_batches
 from attn_tools.attention_metrics import *
 
-# ---------------------------
+
 # CONFIG
-# ---------------------------
 MODEL_ID = "Qwen/Qwen2-VL-2B-Instruct"
 ANNOTATION_FILE = "synthetic_dataset/annotations.jsonl"
 SIDE = 9 # QWEN uses 81 patches for 256x256 images
@@ -36,9 +35,7 @@ def compute_all_stats(grids, gt_rel, gt_union):
     }
 
 
-# ---------------------------
-# MAIN LOOP
-# ---------------------------            
+# MAIN LOOP        
 def main():
     np.random.seed(SEED)
     print("Loading resources...")
@@ -51,9 +48,7 @@ def main():
 
     centers = get_patch_centers()
 
-    # ---------------------------
-    # Open HDF5 once for all scenes
-    # ---------------------------
+    # Open HDF5
     h5_path = "stats.h5"
     h5 = h5py.File(h5_path, "a")
 
@@ -69,9 +64,7 @@ def main():
 
         record = annotations[scene_id]
 
-        # ---------------------------
         # Resolve tokens
-        # ---------------------------
         rel_word = RELATION_MAP[record["relation_AB"]]
         tok_words = {
             "rel": rel_word,
@@ -95,9 +88,7 @@ def main():
         # Prepare HDF5 group
         scene = h5.require_group(f"scenes/{scene_id}")
 
-        # ===========================
         # Relation token stats
-        # ===========================
         tok_idx = token_map[rel_word][0]
         grids = attn[:, :, tok_idx, visual_range].reshape(L, H, SIDE, SIDE)
 
@@ -114,9 +105,7 @@ def main():
             if k in grp: del grp[k]
             grp.create_dataset(k, data=v, compression="gzip")
 
-        # ===========================
         # Entity tokens A and B
-        # ===========================
         for obj in ["A", "B"]:
 
             word = tok_words[obj]
@@ -136,9 +125,7 @@ def main():
                 if k in grp: del grp[k]
                 grp.create_dataset(k, data=v, compression="gzip")
 
-        # ---------------------------
         # BASELINES
-        # ---------------------------
         baselines = {
             "uniform":  baseline_uniform(L, H, SIDE),
             "gaussian": baseline_gaussian(L, H, SIDE)

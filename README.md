@@ -1,6 +1,6 @@
 # Attention Alignment in Vision–Language Models
 
-This project analyzes how attention in Vision–Language Models aligns with ground-truth object regions in synthetic scenes with spatial relations (e.g., “left of”, “above”). We extract cross-attention maps for 5k synthetic scenes and evaluate whether correct predictions are supported by meaningful visual grounding or by shortcuts such as language bias or center bias.
+We examine whether cross-attention weights in vision-language models (VLMs) provide interpretable evidence of relational reasoning. Using a synthetic task and spatial alignment metrics, we analyze attention across layers, heads, and scene complexity. We find that attention often underperforms a uniform baseline, indicating sensitivity to spatial and dataset biases, and that relational alignment emerges transiently in middle layers with limited head specialization. Overall, cross-attention alone provides an incomplete basis for interpreting relational reasoning in VLMs.
 
 ## Important Note
 

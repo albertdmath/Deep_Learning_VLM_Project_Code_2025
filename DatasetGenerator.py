@@ -100,7 +100,7 @@ def generate_scene(image_id):
                 used_shape_color_pairs.add((shape, color_name))
                 break
 
-        # Ensure shapes don't overlap too much - this can go on forever...
+        # Ensure shapes don't overlap too much (warning: this can go on forever...)
         while True:
             center = (
                 random.randint(SHAPE_SIZE, IMG_SIZE - SHAPE_SIZE),

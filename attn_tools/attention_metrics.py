@@ -10,18 +10,15 @@ def find_token_and_visual_range(input_ids, words, tokenizer, verbose=False):
         token_map : dict[word] -> list[int]   (token positions)
         visual_range : range
     """
-    # -------------------------
+
     # Decode tokens for debug
-    # -------------------------
     if verbose:
         decoded = tokenizer.convert_ids_to_tokens(input_ids.tolist())
         print("Decoded tokens:")
         for i, tk in enumerate(decoded):
             print(f"{i:3d} | {repr(tk)}")
 
-    # -------------------------
     # Resolve token indices for words
-    # -------------------------
     token_map = {}
 
     for word in words:
@@ -43,9 +40,7 @@ def find_token_and_visual_range(input_ids, words, tokenizer, verbose=False):
 
         token_map[word] = matches.tolist()
 
-    # -------------------------
     # Find visual token range
-    # -------------------------
     img_start = tokenizer.convert_tokens_to_ids("<|vision_start|>")
     img_end   = tokenizer.convert_tokens_to_ids("<|vision_end|>")
 
@@ -208,18 +203,18 @@ def calculate_com_distance(attn_grids, mask, eps=1e-8):
     x = x[None, None, :, :]  # (1, 1, 9, 9)
     y = y[None, None, :, :]  # (1, 1, 9, 9)
 
-    # ---- Attention center of mass (L, H) ----
+    # Attention center of mass (L, H) 
     attn_sum = attn_grids.sum(axis=(-2, -1))+ eps
 
     ax = (attn_grids * x).sum(axis=(-2, -1), keepdims=False) / attn_sum
     ay = (attn_grids * y).sum(axis=(-2, -1), keepdims=False) / attn_sum
 
-    # ---- Mask center of mass (scalar) ----
+    # Mask center of mass (scalar)
     msum = mask.sum() + eps
     mx = (mask * x[0, 0]).sum() / msum
     my = (mask * y[0, 0]).sum() / msum
 
-    # ---- Distance (L, H) ----
+    # Distance (L, H) 
     dist = np.sqrt((ax - mx) ** 2 + (ay - my) ** 2)
     return dist
 

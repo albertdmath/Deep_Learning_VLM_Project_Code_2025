@@ -5,9 +5,8 @@ from transformers import AutoProcessor, AutoModelForVision2Seq
 import json
 import jsonlines   # pip install jsonlines
 
-# ------------------------
+
 # SETUP
-# ------------------------
 model_id = "Qwen/Qwen2-VL-2B-Instruct"
 BATCH_SIZE = 16   # adjust based on VRAM
 
@@ -31,9 +30,8 @@ output_file = Path("inference_results.txt")
 # Clean output file
 output_file.write_text("")   # empty the file at the start
 
-# ------------------------
-# LOAD ALL JSON ANNOTATIONS
-# ------------------------
+
+# Load JSON annotations
 print("Reading JSON annotations...")
 
 annotations = {}  # map: scene_id -> record
@@ -45,9 +43,7 @@ with jsonlines.open(annotations_path) as reader:
 
 print(f"Loaded {len(annotations)} annotation entries.")
 
-# ------------------------
-# PROCESS IMAGES (BATCHED)
-# ------------------------
+# Process Images (in batches)
 files = sorted(folder.glob("*.png"))
 print(f"Found {len(files)} images.")
 
