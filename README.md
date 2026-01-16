@@ -2,9 +2,9 @@
 
 This project analyzes how attention in Vision–Language Models aligns with ground-truth object regions in synthetic scenes with spatial relations (e.g., “left of”, “above”). We extract cross-attention maps for 5k synthetic scenes and evaluate whether correct predictions are supported by meaningful visual grounding or by shortcuts such as language bias or center bias.
 
-## Important Note!
+## Important Note
 
-The file with all quantitative metrics is too large to be stored on GH. To generate it locally, run:
+All analyses in the Results section are performed in either `attention_analysis.ipynb` or `pca-heads.ipynb`. Running these notebooks requires a file containing all quantitative metrics. Because this file is too large to be stored on GitHub, it must be generated locally using:
 ```bash
 # Creates stats.h5 (GPU required)
 python run_evaluation.py
@@ -27,14 +27,14 @@ Tabular metrics per scene, token, layer, and head, with:
 - error-conditioned analysis  
 - head clustering  
 - complexity curves  
-- attention–performance correlations -->
+- attention–performance correlations
 
 ## Goal
-Quantify when and where VLM attention reflects true visual reasoning vs spurious behavior.
+Quantify when and where VLM attention reflects true visual reasoning vs spurious behavior. -->
 
 ## Generating Figures
 
-Generate attention visualizations on-demand (requires GPU):
+Generate attention visualizations from the report on-demand (requires GPU):
 
 ```bash
 # Heatmap only
